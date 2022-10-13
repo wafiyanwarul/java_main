@@ -1,0 +1,14 @@
+import javax.swing.JOptionPane;
+
+public class nomor4 {
+    public static void main(String[] args) {
+    int angka1 = 0;
+          angka1 = Integer.parseInt(JOptionPane.showInputDialog("Masukkan tiga angka terakhir NIM Anda : "));
+          if (angka1 % 2 == 0){
+              JOptionPane.showMessageDialog(null, "Genap");
+          } else {
+              JOptionPane.showMessageDialog(null, "Ganjil");
+          }
+
+    }
+}
