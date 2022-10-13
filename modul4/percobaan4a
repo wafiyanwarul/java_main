@@ -1,0 +1,20 @@
+import java.io.*;
+import static java.time.Clock.system;
+
+public class nomor4 {
+    public static void main(String[] args) {
+        BufferedReader dataMasuk = new BufferedReader(new InputStreamReader(System.in));
+        int angka = 0;
+            System.out.print("Masukkan tiga angka terakhir NIM Anda! = ");
+        try {
+            angka = Integer.parseInt(dataMasuk.readLine());
+        } catch (Exception e) {
+            System.out.println("Error!!!");
+        }
+        if (angka % 2 == 0) {
+            System.out.println(angka + " = Genap");
+        } else {
+            System.out.println(angka + " = Ganjil");
+        }
+    }
+}
