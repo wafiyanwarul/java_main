@@ -1,0 +1,22 @@
+public class nomor2b {
+    public static void main(String[] args) {
+        long batas = 5;
+        long faktorial = 1;
+        for(int i=5;i<=batas;i++){
+            faktorial=1;
+            for(int faktor=2; faktor<=i; faktor++)
+            faktorial*=faktor;  
+        }
+        long batas2 = 4;
+        long faktorial2 = 1;
+        for(int i=4;i<=batas2;i++){
+            faktorial2=1;
+            for(int faktor=2; faktor<=i; faktor++)
+            faktorial2*=faktor;
+        }
+        
+        long hasilAkhir = faktorial + faktorial2;
+        System.out.println("5! + 4! = " + hasilAkhir);
+        
+    }
+}
