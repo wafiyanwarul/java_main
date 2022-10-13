@@ -1,0 +1,20 @@
+public class nomor2a {
+    public static void main(String[] args) {
+        int angka = 4;
+        int pangkat = 3;
+        int power = angka;
+        for (int i=1;i<pangkat;i++) {
+            power*=angka;
+        }
+       
+        int angka1 = 5;
+        int pangkat1 = 2;
+        int power1 = angka1;
+        for (int i=1;i<pangkat1;i++){
+            power1*=angka1;
+        }
+        
+        int hasilAkhir = power + power1;
+        System.out.println("4^3 + 5^2 = " +hasilAkhir);
+    }
+}
