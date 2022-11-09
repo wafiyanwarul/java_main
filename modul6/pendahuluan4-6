@@ -1,0 +1,62 @@
+import javax.swing.JOptionPane;
+public class empatlimaenamPendahuluan {
+
+    public static void main(String[] args) {
+        int data2 [][] = {{4,6,4,7,8,3,2,10},{4,6,4,2,8,8,2,10}};
+        System.out.println("Cetak Array dengan for : ");
+        for (int i=0; i<data2.length; i++){
+            for (int j=0; j<data2[0].length; j++){
+                System.out.print(data2[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println(" ");
+        
+        int input = Integer.parseInt(JOptionPane.showInputDialog("Masukkan angka"));
+        for (int i=0; i<data2.length; i++){
+            for (int j=0; j<data2[0].length; j++){
+                if (data2[i][j]==input) 
+                    System.out.println("Nilai " + input + " berada pada indeks ke " + ("("+i+","+j+")"));
+            }
+        }
+        
+        System.out.println("\nCetak Array Dengan While");
+        int barisA = 0;
+        while (barisA < data2.length) {
+            int kolom = 0;
+            while (kolom < data2[barisA].length) {
+                System.out.print(data2[barisA][kolom] + " ");
+                kolom++;
+            }
+            System.out.println();
+            barisA++;
+        }
+
+        System.out.println("\nCetak Array Dengan Do While");
+        int barisB = 0;
+        do {
+            int kolom = 0;
+            do {
+                System.out.print(data2[barisB][kolom] + " ");
+                kolom++;
+            } while (kolom < data2[barisB].length);
+            System.out.println();
+            barisB++;
+        } while (barisB < data2.length);
+        
+        int jumlahNilai = 0;
+        double banyakNilai = 0;
+        for (int i = 0; i < data2.length; i++) {
+            for (int j = 0; j < data2[i].length; j++) {
+                jumlahNilai += data2[i][j];
+                banyakNilai++;
+            }
+        }
+        
+        System.out.println(" ");
+        System.out.println("Jumlah nilai Array : " + jumlahNilai);
+        System.out.println("Banyak nilai Array : " + banyakNilai);
+        double average = jumlahNilai / banyakNilai;
+        System.out.println("\nNilai rata-ratanya array-nya adalah : " + average);
+    }
+}
