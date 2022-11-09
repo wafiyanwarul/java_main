@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class percobaan2 extends JFrame {
+
+    JTextField teks = new JTextField();
+
+    percobaan2() {
+        setTitle("Design Preview");
+        setLocation(500,250);
+        setSize(270, 300);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    void tampilan(Color Background) {
+        teks.setBounds(10, 10, 230, 40);
+        add(teks);
+        int baris = 60, indeks = 0;
+        String[] elemen = {"1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", "0", "C", "=", "/"};
+        for (int i = 0; i < 4; i++) {
+            int kolom = 10;
+            for (int j = 0; j < 4; j++) {
+                JButton tombol = new JButton(elemen[indeks++]);
+                tombol.setBounds(kolom, baris, 50, 40);
+                tombol.setBackground(Background);
+                add(tombol);
+                kolom += 60;
+            }baris += 50;     
+        }setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        percobaan2 call = new percobaan2();
+        //untuk memanggil method dan diberi warna tombol
+        call.tampilan(Color.CYAN);
+    }
+}
