@@ -1,0 +1,51 @@
+import javax.swing.JOptionPane;
+
+public class percobaan4 {
+
+    static void cetakHasil(int[][] arr) {
+        for (int a = 0; a < arr.length; a++) {
+            for (int b = 0; b < arr[0].length; b++) {
+                System.out.print(arr[a][b] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Matriks 1 Matriks 2");
+        int matrik1[][] = {{2, 9}, {1, 5}};
+        int matrik2[][] = {{5, 17}, {10, 4}};
+        //int hasil [][] = int matrik1 [][] + int matrik2 [][];
+        for (int i = 0; i < matrik1.length; i++) {
+            for (int j = 0; j < matrik1[0].length; j++) {
+                System.out.print(matrik1[i][j] + "   ");
+            }
+            for (int j = 0; j < matrik2[0].length; j++) {
+                System.out.print(matrik2[i][j] + "   ");
+            }
+            System.out.println();
+        }
+
+        int hasil[][] = new int[2][2];
+
+        int input = Integer.parseInt(JOptionPane.showInputDialog("Cari posisi indeks dari angka = "));
+
+        System.out.println(" ");
+        for (int i = 0; i < matrik1.length; i++) {
+            for (int j = 0; j < matrik1[i].length; j++) {
+                if (matrik1[i][j] == input) {
+                    System.out.println("Angka " + input + " berada pada indeks ke : " + "(" + i + "," + j + ")");
+                }
+            }
+        }
+
+        for (int i = 0; i < hasil.length; i++) {
+            for (int j = 0; j < hasil[i].length; j++) {
+                hasil[i][j] = matrik1[i][j] + matrik2[i][j];
+            }
+        }
+
+        System.out.println("\nHasil penjumlahan matrik 1 dan matrik 2 :");
+        cetakHasil(hasil);
+    }
+}
