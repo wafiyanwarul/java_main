@@ -1,0 +1,69 @@
+/**
+ *
+ * @author ACER A515-45-R3RR 
+ * WAFIY ANWARUL HIKAM 220605110022
+ * B TEKNIK INFORMATIKA 
+ * UIN MAULANA MALIK IBRAHIM MALANG 
+ * PRAKTIKUM ALGORITMA & PEMROGRAMAN
+ *
+ */
+ 
+import java.util.Scanner;
+
+public class menghitungTahunKabisat {
+    
+    static void menu(){
+        Scanner input = new Scanner(System.in);
+        
+        int pilihMenu;
+        
+        System.out.println("Pilih menu (1/2) : ");
+        System.out.println("1. MENGHITUNG TAHUN KABISAT ");
+        System.out.println("2. KELUAR ");
+        pilihMenu = input.nextInt();
+        
+        switch(pilihMenu){
+            case 1 : perhitungan();
+            break;
+            case 2 : System.out.println("Keluar");
+            break;
+            default : System.out.println("Angka yang Anda masukkan SALAH !!!");
+                System.out.println("Masukkan Kembali (1/2)");
+        }
+        
+    }
+    
+    static void perhitungan(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("## STUDI KASUS 1 ##");
+        System.out.println("## MENGHITUNG TAHUN KABISAT ##");
+        System.out.println();
+
+        int tahunAwal, tahunAkhir;
+
+        System.out.print("Masukkan tahun (batas awal) : ");
+        tahunAwal = input.nextInt();
+
+        System.out.print("Masukkan tahun (batas akhir) : ");
+        tahunAkhir = input.nextInt();
+
+        for (int i = tahunAwal; i <= tahunAkhir; i++) {
+
+            if (i % 400 == 0) {
+                System.out.println(i + " adalah tahun kabisat");
+            } else if (i % 100 == 0) {
+                System.out.println(i + " bukan tahun kabisat");
+            } else if (i % 4 == 0) {
+                System.out.println(i + " adalah tahun kabisat");
+            } else {
+                System.out.println(i + " bukan tahun kabisat");
+            }
+        }
+    }
+    
+    public static void main(String args[]) {
+        menu();
+
+    }
+}
