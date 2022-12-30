@@ -1,3 +1,7 @@
+//kode ini menghitung harga awal yang diinput melalui Scanner
+//kemudian didiskon 10%, setelah didiskon, harga didiskon lagi 10%
+//sehingga diskon dilakukan sebanyak tiga kali
+
 import java.util.Scanner;
 
 public class discount {
