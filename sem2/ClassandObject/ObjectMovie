@@ -1,0 +1,31 @@
+public class MovieTestDrive {
+
+    public static void main(String[] args) {
+        class Movie {
+
+            String tittle;
+            String genre;
+            int rating;
+
+            void playIt() {
+                System.out.println("playing the movie");
+            }
+        }
+
+        Movie satu = new Movie();
+        satu.tittle = "Ayat-ayat cinta";
+        satu.genre = "Islami";
+        satu.rating = 4;
+
+        Movie dua = new Movie();
+        dua.tittle = "The Davinci Code";
+        dua.genre = "Misteri";
+        dua.rating = 4;
+        dua.playIt();
+
+        Movie tiga = new Movie();
+        tiga.tittle = "Sang Pencerah";
+        tiga.genre = "Islami";
+        tiga.rating = 5;
+    }
+}
