@@ -1,0 +1,13 @@
+package practicumpbo.classandobject;
+
+/**
+ * Wafiy Anwarul Hikam / 220605110022? / Praktikum PBO / F
+ * @author ACER A515-45-R3RR
+ */
+public class GameLauncher {
+
+    public static void main(String[] args) {
+        GuessGame game = new GuessGame();
+        game.startGame();
+    }
+}
