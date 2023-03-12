@@ -1,0 +1,55 @@
+package practicumpbo.pendahuluan;
+
+/*
+ * Wafiy Anwarul Hikam FST_Teknik Informatika 220605110022_Praktikum PBO_F
+ */
+public class pendahuluan {
+
+    //STATEMENT
+    static void awalan() {
+        System.out.println("PROGRAM JAVA YANG MEMUAT");
+        System.out.println("STATEMENT, PERULANGAN, DAN PERCABANGAN");
+    }
+
+    public static void main(String[] args) {
+        awalan();
+        
+        //membuat jarak
+        System.out.println();
+        
+        System.out.println("BERIKUT ADALAH CONTOH BILANGAN 1-20 : ");
+
+        //untuk perulangan indeks dari 1-20
+        for (int i = 1; i <= 20; i++) {
+            System.out.print(i);
+            //untuk membuat perulangan koma
+            for (int j = 0; j < 1; j++) {
+                System.out.print(",");
+            }
+        }
+
+        //membuat jarak
+        System.out.println();
+
+        //bagian angka ganjil
+        System.out.println("BILANGAN GANJIL ANTARA 1-20");
+        for (int ganjil = 1; ganjil <= 20; ganjil++) {
+            if (ganjil % 2 != 0) {
+                System.out.print(ganjil + " ");
+            }
+        }
+
+        //membuat jarak 
+        System.out.println();
+
+        
+        //bagian angka genap
+        System.out.println("BILANGAN GENAP ANTARA 1-20");
+        for (int genap = 1; genap <= 20; genap++) {
+            if (genap % 2 == 0) {
+                System.out.print(genap + " ");
+            }
+        }
+    }
+
+}
