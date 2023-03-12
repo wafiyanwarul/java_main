@@ -1,0 +1,27 @@
+package practicumpbo.pendahuluan;
+
+/**s
+ * WAFIY ANWARUL HIKAM (220605110022) / PBO-F
+ */
+import java.util.Random;
+
+public class bentukFrasa {
+
+    public static void main(String[] args) {
+        //membuat list kata untuk dipilih dengan array
+        String[] listKataSatu = {"Hyundai", "Toyota", "Daihatsu", "Honda", "Mitsubishi", "Suzuki", "Tesla"};
+        String[] listKataDua = {"Stroberi", "Jeruk", "Durian", "Pisang", "Melon", "Anggur", "Manggis"};
+        String[] listKataTiga = {"Iphone", "Samsung", "Xiaomi", "Realme", "Motorola", "Infinix", "Oppo"};
+
+        //untuk memilih satu indeks secara acak dari list kata pada masing-masing array
+        int kataSatuIndex = new Random().nextInt(listKataSatu.length);
+        int kataDuaIndex = new Random().nextInt(listKataDua.length);
+        int kataTigaIndex = new Random().nextInt(listKataTiga.length);
+
+        //mencetak frasa dari tiga list kata secara random
+        System.out.println("Saya menginginkan sebuah " + 
+                listKataSatu[kataSatuIndex] + " " + 
+                listKataDua[kataDuaIndex] + " " + 
+                listKataTiga[kataTigaIndex]);
+    }
+}
