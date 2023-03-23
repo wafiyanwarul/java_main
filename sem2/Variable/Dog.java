@@ -12,8 +12,9 @@ public class Dog {
     public static void main(String[] args) {
         //membuat objek dog dan akses 
         Dog dog1 = new Dog();
-        dog1.bark();
         dog1.name = "Ciko";
+        dog1.bark();
+        
         
 //        buat array dog
         Dog [] anjing = new Dog[3];
