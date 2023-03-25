@@ -6,6 +6,7 @@ package practicumpbo.objectbehavior;
  */
 
 public class Dog {
+    
     int size;
     String name;
     
