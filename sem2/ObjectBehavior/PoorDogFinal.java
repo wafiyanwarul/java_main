@@ -58,5 +58,7 @@ class PoorDogTestDrive {
         three.setName("Ollie");
         System.out.println("Ukuran anjing : " + three.getSize());
         System.out.println("Nama anjing : " + three.getName());
+        
     }
+    
 }
