@@ -4,6 +4,7 @@ package practicumpbo.objectbehavior;
  * Wafiy Anwarul Hikam / 220605110022 / Praktikum PBO / F
  * @author ACER A515-45-R3RR
  */
+
 public class PoorDog {
 
     private int size;
