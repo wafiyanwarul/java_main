@@ -1,4 +1,4 @@
-//coba input dengan Scanner mengimplementasikan OOP dan Enkapsulasi
+//coba input dengan BufferedReader mengimplementasikan OOP dan Enkapsulasi
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -68,7 +68,7 @@ class Mahasiswa{
         try {
 
             System.out.print("Masukkan nama mahasiswa : ");
-            name = br.readLine();
+            name = br.readLine(); //terdapat perbedaan sintaks dengan Scanner
 
             System.out.print("Masukkan universitas mahasiswa : ");
             university = br.readLine();
