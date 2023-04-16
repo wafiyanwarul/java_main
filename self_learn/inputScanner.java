@@ -1,19 +1,26 @@
+//coba input dengan Scanner mengimplementasikan OOP dan Enkapsulasi
 import java.util.Scanner;
 
 public class inputScanner {
     public static void main(String[] args) {
+        //membuat variabel untuk kelas Mahasiswa agar dapat mengakses method di dalamnya
         Mahasiswa mhs = new Mahasiswa();
+        //mengakses method pada Kelas Mahasiswa
         mhs.inputData();
         mhs.tampilData();
     }
 }
 
 class Mahasiswa {
+    
+    //instance variable
     private String name, department, faculty, university;
     private int nim;
 
+    //deklarasi Scanner
     Scanner in = new Scanner(System.in);
 
+    //SETTER
     public void setName(String name) {
         this.name = name;
     }
@@ -34,6 +41,7 @@ class Mahasiswa {
         this.nim = nim;
     }
 
+    //GETTER
     public String getName() {
         return name;
     }
@@ -54,6 +62,7 @@ class Mahasiswa {
         return nim;
     }
 
+    //method untuk memasukkan data mahasiswa 
     public void inputData() {
         try {
 
@@ -74,11 +83,13 @@ class Mahasiswa {
 
         } catch (Exception e) {
             // TODO: handle exception
+            // Muncul ketika user memasukkan input selain angka pada bagian input NIM mahasiswa
             System.out.println("Masukkan sesuai apa yang diminta !!!");
-            inputData();
+            inputData();// Setelah Pesan saat error ditampilkan, akan memanggil kelas inputData(); lagi
         }
     }
 
+    //method untuk menampilkan data mahasiswa setelah dilakukan input data
     public void tampilData() {
         System.out.println("Data Mahasiswa : ");
         System.out.println("Nama        : " + this.name);
