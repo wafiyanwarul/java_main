@@ -1,0 +1,82 @@
+import javax.swing.JOptionPane;
+class percobaan2 {
+    public static void main(String[] args) {
+        System.out.println("Menggunakan for : ");
+        int data2[][] = {{4,6,4,2,8,4,2,10},{4,6,4,2,8,4,2,10}};
+        for (int a=0; a<data2.length; a++){
+            for (int b=0; b<data2[0].length; b++){
+                System.out.print((data2[a][b] + " "));
+            }
+            System.out.print("\n");
+        }
+        
+        System.out.println("\nDengan While :");
+        int baris1 = 0;
+        while (baris1 < data2.length) {
+            int kolom = 0;
+            while (kolom < data2[baris1].length) {
+                System.out.print(data2[baris1][kolom] + " ");
+                kolom++;
+            }
+            System.out.println();
+            baris1++;
+        }
+
+        System.out.println("\nDengan Do While : ");
+        int baris2 = 0;
+        do {
+            int kolom = 0;
+            do {
+                System.out.print(data2[baris2][kolom] + " ");
+                kolom++;
+            } while (kolom < data2[baris2].length);
+            System.out.println();
+            baris2++;
+        } while (baris2 < data2.length);
+        
+        int totalNilai = 0;
+        double banyakNilai = 0;
+        for (int i = 0; i < data2.length; i++) {
+            for (int j = 0; j < data2[i].length; j++) {
+                totalNilai += data2[i][j];
+                banyakNilai++;
+            }
+        }
+        
+        System.out.println(" ");
+        System.out.println("Total Nilainya adalah : " + totalNilai);
+        System.out.println("Banyak Nilainya adalah : " + banyakNilai);
+        double average = totalNilai / banyakNilai;
+        System.out.println("\nNilai rata-ratanya yaitu : " + average);
+        System.out.println(" ");
+
+        int cariAngka = Integer.parseInt(JOptionPane.showInputDialog("Cari angka : "));
+        int ganti = Integer.parseInt(JOptionPane.showInputDialog("Masukkan angka pengganti : "));
+        for (int i=0; i<data2.length; i++) {
+            for (int j = 0; j < data2[i].length; j++) {
+                if (data2[i][j] == cariAngka) {
+                    data2[i][j] = ganti;
+                    System.out.println("Angka " + cariAngka + " berada pada indeks ke : " + "("+i+","+j+")");
+                }
+            }
+        }
+        
+        System.out.println(" ");
+        for (int i = 0; i < data2.length; i++) {
+            for (int j = 0; j < data2[0].length; j++) {
+                System.out.print(data2[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int evenSum =0;
+        for (int i = 0; i < data2.length; i++) {
+            for (int j = 0; j < data2[0].length; j++) {
+               if(j%2==0) evenSum += data2[i][j];
+            }
+        }
+        System.out.println("Jumlah dari elemen berindeks genap = " + evenSum);
+        
+        
+    }
+}

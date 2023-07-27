@@ -1,0 +1,19 @@
+public class percobaan3 {
+
+    public static void main(String[] args) {
+        System.out.println("Percobaan Nomor 3 : ");
+        System.out.println(" ");
+        String tipe[] = {"NAMA", "ALAMAT", "TELEPON"};
+        String data[][] = {{"ABDUL", "Kediri", "085646668991"}, {"KUSNO", "Trenggalek", "085646668992"}, {"PONIRAN", "Bojonegoro", "085646668999"}};
+        for (int z = 0; z < tipe.length; z++) {
+            System.out.print(tipe[z] + "   ");
+        }
+        System.out.println();
+        for (int x = 0; x < data.length; x++) {
+            for (int y = 0; y < data[0].length; y++) {
+                System.out.print(data[x][y] + "  ");
+            }
+            System.out.println();
+        }
+    }
+}

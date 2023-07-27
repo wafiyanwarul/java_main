@@ -1,0 +1,48 @@
+import javax.swing.*;
+import java.awt.*;
+
+class pendahuluan3 extends JFrame {
+    Label pertama = new Label("Masukkan Angka Pertama :");
+    Label kedua = new Label("Masukkan Angka Kedua :");
+    Label ketiga = new Label("Masukkan Angka Ketiga :");    
+    TextField angka1 = new TextField(15);
+    TextField angka2 = new TextField(15);
+    TextField angka3 = new TextField(15);
+    JButton tambah = new JButton (" + ");
+    JButton kurang = new JButton (" - ");
+    JButton garing = new JButton (" / ");
+    JButton bintang = new JButton (" * ");
+    
+    
+    pendahuluan3(){
+        super("Design");
+        setLocation(200,200);
+        setSize(180,300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+    
+    void tampak(){
+        getContentPane().setLayout(new FlowLayout());
+        add(pertama);
+        getContentPane().add(angka1);
+        add(kedua);
+        getContentPane().add(angka2);
+        add(ketiga);
+        getContentPane().add(angka3); 
+        
+        getContentPane().add(tambah);
+//        tambah.setBounds(15,90,40,25);
+        getContentPane().add(kurang);
+//        kurang.setBounds(65,90,40,25);
+        getContentPane().add(garing);
+//        garing.setBounds(115,90,40,25);
+        getContentPane().add(bintang);
+//        bintang.setBounds(65,125,40,25);
+    }
+    
+    public static void main(String[] args) {
+        pendahuluan3 call = new pendahuluan3();
+        call.tampak();
+    }
+}

@@ -1,0 +1,41 @@
+//created by Wafiy Anwarul Hikam
+//Computer Science Enthusiast 
+
+public class PlayCar {
+
+    public static void main(String[] args) {
+
+        class Mobil {
+
+            String brand;
+            String type;
+            int speed;
+
+            void turnOn() {
+                System.out.println("Turn on the Car");
+            }
+           
+            void turnOff() {
+                System.out.println("Turn off the Car");
+            }
+        }
+
+        Mobil satu = new Mobil();
+        satu.brand = "Hyundai";
+        satu.type = "Avega";
+        satu.speed = 240;
+        satu.turnOn();
+
+        Mobil dua = new Mobil();
+        satu.brand = "Toyota";
+        satu.type = "86";
+        satu.speed = 280;
+        satu.turnOff();
+
+        Mobil tiga = new Mobil();
+        satu.brand = "Honda";
+        satu.type = "Civic Type-R";
+        satu.speed = 320;
+        satu.turnOn();
+    }
+}

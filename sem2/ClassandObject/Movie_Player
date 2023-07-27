@@ -1,0 +1,16 @@
+package practicumpbo.classandobject;
+
+/**
+ * Wafiy Anwarul Hikam / 220605110022? / Praktikum PBO / F
+ * @author ACER A515-45-R3RR
+ */
+
+public class Player {
+
+    int number = 0;
+
+    public void guess() {
+        number = (int) (Math.random() * 10);
+        System.out.println("Saya menebak angka " + number);
+    }
+}

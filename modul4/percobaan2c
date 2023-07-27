@@ -1,0 +1,23 @@
+public class nomor2c {
+    public static void main(String[] args) {
+        int angka = 4;
+        int pangkat = 2;
+        int power = angka;
+        for (int i=1;i<pangkat;i++) {
+            power*=angka;
+        }
+       
+        int angka1 = 5;
+        int pangkat1 = 1;
+        int power1 = angka1;
+        for (int i=1;i<pangkat1;i++){
+            power1*=angka1;
+        }
+        int c = 5;
+               
+        int h1 = power + power1;
+        int h2 = c + power;
+        int hasilAkhir = h1/h2;
+        System.out.println("(4^2 + 5^1)/5+4^2 = " + hasilAkhir);
+    }
+}
